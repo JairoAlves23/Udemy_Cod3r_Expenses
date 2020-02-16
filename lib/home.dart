@@ -14,10 +14,7 @@ class _HomeState extends State<Home> {
         value: 310.76,
         date: DateTime.now()),
     Transaction(
-        id: 't2',
-        title: 'Conta de Luz',
-        value: 211.30,
-        date: DateTime.now()),
+        id: 't2', title: 'Conta de Luz', value: 211.30, date: DateTime.now()),
   ];
 
   @override
@@ -40,15 +37,12 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            Container(
-              child: Card(
-                color: Colors.blue,
-                elevation: 5,
-                child: Text(
-                  "Lista de Transações",
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
+            Column(
+              children: _transactions.map((tr) {
+                return Card(
+                  child: Text(tr.title),
+                );
+              }).toList(),
             )
           ],
         ));
