@@ -11,8 +11,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _transactions = [
-    Transaction(
+  final List<Transaction> _transactions = [
+    /* Transaction(
         id: 't1',
         title: 'Novo Tênis de corrida',
         value: 315.76,
@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
       title: 'Conta de Luz',
       value: 211.30,
       date: DateTime.now(),
-    ),
+    ), */
   ];
 
   _addTransaction(String title, double value) {
@@ -36,6 +36,8 @@ class _HomeState extends State<Home> {
     setState(() {
       _transactions.add(newTransaction);
     });
+
+    Navigator.of(context).pop();
   }
 
   _openTransactionFormModal(BuildContext context) {
