@@ -15,6 +15,10 @@ void main() => runApp(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
+                button: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
