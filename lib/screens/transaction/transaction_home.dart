@@ -1,18 +1,18 @@
 import 'dart:math';
 
-import 'package:expenses/components/chart.dart';
-import 'package:expenses/components/transaction_form.dart';
-import 'package:expenses/components/transaction_list.dart';
 import 'package:expenses/models/transaction.dart';
+import 'package:expenses/screens/transaction/chart.dart';
+import 'package:expenses/screens/transaction/transaction_form.dart';
+import 'package:expenses/screens/transaction/transaction_list.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
+class TransactionHome extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _TransactionHomeState createState() => _TransactionHomeState();
 }
 
-class _HomeState extends State<Home> {
-  final List<Transaction> _transactions = [];
+class _TransactionHomeState extends State<TransactionHome> {
+   final List<Transaction> _transactions = [];
 
   List<Transaction> get _recentTransaction {
     return _transactions.where((tr) {
